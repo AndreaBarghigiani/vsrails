@@ -32,3 +32,6 @@
 
 # Ignore .keep
 **/.keep
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
