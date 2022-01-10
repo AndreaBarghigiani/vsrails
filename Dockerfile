@@ -1,11 +1,14 @@
 FROM ruby:3
 
+WORKDIR /usr/src/app
+
 RUN apt-get update -yqq
 
-COPY . /usr/src/app/
-
-WORKDIR /usr/src/app
+COPY Gemfile /usr/src/app/Gemfile
+COPY Gemfile.lock /usr/src/app/Gemfile.lock
 
 RUN bundle install
 
-CMD ["bin/dev"]
+COPY . /usr/src/app/
+
+CMD ["bash"]

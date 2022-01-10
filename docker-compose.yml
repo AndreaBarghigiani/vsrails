@@ -1,17 +1,28 @@
-version: "3"
+x-app: &default-app
+  build:
+    context: "."
+  depends_on:
+    - "database"
+  tty: true
+  volumes:
+    - .:/usr/src/app
+  environment:
+    DATABASE_HOST: database
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: some-long-psw
+    POSTGRES_DB: dockerized_r7_development
 
 services:
   web:
-    build: .
+    <<: *default-app
+
+  watcher:
+    <<: *default-app
+    command: /bin/bash -c "rm -rf /usr/src/app/tmp/pids/server.pid && bin/dev"
     ports:
-      - "3000:3000"
-    volumes:
-      - .:/usr/src/app
-    environment:
-      DATABASE_HOST: database
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: some-long-psw
-      POSTGRES_DB: dockerized_r7_development
+      - 3000:3000
+    depends_on:
+      - web
   redis:
     image: redis
   database:
