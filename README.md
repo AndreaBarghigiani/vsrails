@@ -25,4 +25,4 @@ Just discuss it in the proper section or open an issue and let's grow togheter b
 
 Always remember that **this is a work in progress** my scope with this is to create a bash script or something that you can use via terminal to configure the environment of your dreams without the hassle of installing everything on your machine.
 
-Even this readmi is a WIP and I hope to update it with more details in the (hopefully not far) future.
+Even this readme is a WIP and I hope to update it with more details in the (hopefully not far) future.
