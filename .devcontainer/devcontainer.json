@@ -17,7 +17,20 @@
   "workspaceFolder": "/usr/src/app",
 
   // Set *default* container specific settings.json values on container create.
-  "settings": {},
+  "settings": {
+		"[gemfile]": {
+			"editor.defaultFormatter": "misogi.ruby-rubocop"
+		},
+		"tailwindCSS.includeLanguages": {
+			"*.erb": "html",
+			"*.html.erb": "erb"
+		},
+		"tailwindCSS.experimental.classRegex": ["class:\\s*\"([^\"]*)\""],
+		"files.associations": {
+			"*.html.erb": "erb",
+			"*.erb": "erb"
+		},
+	},
 
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
