@@ -22,13 +22,12 @@
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
 		"rebornix.ruby", // auto-formatting via Rubocop
-		"misogi.ruby-rubocop", // dialogs with Rubocop
-		"vscode-stylelint",
 		"dbaeumer.vscode-eslint",
 		"hoovercj.vscode-settings-cycler",
 		"visualstudioexptteam.vscodeintellicode",
 		"bradlc.vscode-tailwindcss",
-		"heybourn.headwind"
+		"heybourn.headwind",
+		"misogi.ruby-rubocop", // dialogs with Rubocop
 	]
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

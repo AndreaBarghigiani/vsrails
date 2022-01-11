@@ -15,20 +15,13 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails", ">= 0.9.2"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", ">= 0.9.0"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails", ">= 0.7.3"
-
-# Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails", ">= 0.5.3"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder", "~> 2.11"
+# gem "jbuilder", "~> 2.11"
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.5', '>= 4.5.1'
@@ -52,6 +45,8 @@ gem "bootsnap", ">= 1.4.4", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "view_component"
+gem 'rubocop', '~> 1.24', '>= 1.24.1'
+gem 'rubocop-rails', require: false
 
 group :development, :test do
   # See https://edgeguides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
